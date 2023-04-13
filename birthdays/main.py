@@ -47,7 +47,7 @@ for row in data:
     difference = bday_date - today
 
     # If the difference is equal to 7, send an email
-    if difference <= timedelta(days=14):
+    if (difference <= timedelta(days=14)) and (difference >= timedelta(days=0)):
         info = {}
         info["month"] = bday_date.strftime("%B")
         info["day"] = bday_date.strftime("%A")
