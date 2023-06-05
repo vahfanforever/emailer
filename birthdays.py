@@ -13,13 +13,11 @@ scope = [
     "https://www.googleapis.com/auth/drive",
 ]
 credentials = ServiceAccountCredentials.from_json_keyfile_name(
-    "/home/vahfanforever/source/emailer/birthdays/credentials.json", scope
+    "/home/vahfanforever/source/emailer/credentials.json", scope
 )
 sheet_name = "birthdays"
 
-with open(
-    "/home/vahfanforever/source/emailer/birthdays/email_credentials.json", "r"
-) as file:
+with open("/home/vahfanforever/source/emailer/email_credentials.json", "r") as file:
     data = json.load(file)
 
 email = data["address"]
